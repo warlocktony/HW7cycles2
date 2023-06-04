@@ -17,7 +17,8 @@ public class Main {
         int cash = 15000;
         int total = 0;
         int month = 0;
-        while (total < 2_459_000) {
+        int allCash = 2_459_000;
+        while (total < allCash) {
             month = total / cash;
             total = total + cash;
             System.out.println("month " + month + " the amount of savings is equal to " + total + " RUB!");
@@ -34,10 +35,11 @@ public class Main {
             i = i + 1;
         }
         System.out.println();
-        for (int a = 10; a <= 10 && a >= 1; a = a - 1) {
+        for (int a = 10; a >= 1; a = a - 1) {
             System.out.print(" " + a);
 
         }
+        System.out.println();
     }
 
 
@@ -46,9 +48,9 @@ public class Main {
         int countryPeople = 12_000_000;
         int born = 17;
         int death = 8;
-        for (int i = 1; i <= 10; i++) {
+        for (int year = 1; year <= 10; year++) {
             countryPeople += (countryPeople / 1000) * (born - death);
-            System.out.println("year " + i + " people in country equally " + countryPeople);
+            System.out.println("year " + year + " people in country equally " + countryPeople);
 
         }
     }
@@ -56,13 +58,14 @@ public class Main {
 
     public static void task4() {
         System.out.println("task 4");
+        int percent =7;
         double salary = 15000;
-        double total = 0;
-        int i = 0;
-        for (; total < 12_000_000; i++) {
-            total = total + salary * 1.07;
+        int target  = 12_000_000;
+        int month = 0;
+        for (; salary < target; month++) {
+            salary += salary/100*percent;
 
-            System.out.println("Месяц " + i + " Итого " + total);
+            System.out.println("Месяц " + month + " Итого " + salary);
 
         }
 
@@ -74,7 +77,8 @@ public class Main {
         double salary = 15000;
         double total = 0;
         int month = 0;
-        while ( total < 12_000_000) {
+        int allCash = 12_000_000;
+        while ( total < allCash) {
             total += total * percent / 100;
             total = total + salary;
             if (month % 6 == 0) {
@@ -83,26 +87,27 @@ public class Main {
                 System.out.println("Месяц " + month + " Итого " + total);
 
             }
-            System.out.println(total);
+
         }
     }
 
 
         public static void task6 () {
             System.out.println("task 6");
-            int percentMonth = 7;
-            double cash = 15000;
-            int nineYearInMonth = 108;
-            int month = 0;
-            for ( ;month <= nineYearInMonth;month+=6 ) {
-                cash += cash * percentMonth / 100;
+            int percent = 7;
+            int years = 9;
+            double salary = 15000;
+            int target  = 12_000_000;
 
-                if (month % 6 == 0) {
-                    System.out.println("month " + month + " your cash " + cash);
+            for (int month = 0; salary < target; month++) {
+                salary += salary/100*percent;
+                month = years * 12;
+                System.out.println(salary);
+
                 }
-                System.out.println(cash);
+
             }
-        }
+
 
 
         public static void task7 () {
