@@ -94,7 +94,7 @@ public class Main {
             double cash = 15000;
             int nineYearInMonth = 108;
             int month = 0;
-            while ( month <= nineYearInMonth ) {
+            for ( ;month <= nineYearInMonth;month+=6 ) {
                 cash += cash * percentMonth / 100;
 
                 if (month % 6 == 0) {
