@@ -79,6 +79,7 @@ public class Main {
         int month = 0;
         int allCash = 12_000_000;
         while ( total < allCash) {
+            month++;
             total += total * percent / 100;
             total = total + salary;
             if (month % 6 == 0) {
@@ -94,19 +95,21 @@ public class Main {
 
         public static void task6 () {
             System.out.println("task 6");
-            int percent = 7;
-            int years = 9;
-            double salary = 15000;
-            int target  = 12_000_000;
+            int percentMonth = 7;
+            double cash = 15000;
+            int nineYearInMonth = 108;
+            int month = 0;
+            while ( month <= nineYearInMonth) {
+                month++;
+                cash += cash * percentMonth / 100;
 
-            for (int month = 0; salary < target; month++) {
-                salary += salary/100*percent;
-                month = years * 12;
-                System.out.println(salary);
+                if (month % 6 == 0) {
+                    System.out.println("month " + month + " your cash " + cash);
 
                 }
 
             }
+        }
 
 
 
